@@ -13,6 +13,7 @@ export class VigilanteService {
   private apiUrl = 'http://localhost:8090/parqueadero/consultarvehiculo';
   private apiUrl2 = 'http://localhost:8090/parqueadero/agregarcarro';
   private apiUrl3 = 'http://localhost:8090/parqueadero/agregarmoto';
+  private apiUrl4 = 'http://localhost:8090/parqueadero/removervehiculo';
 
   constructor(private http: Http) { }
 
@@ -32,4 +33,8 @@ export class VigilanteService {
     .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
   }
 
+  sacarVehiculo(placa: String): Observable<string> {
+    return this.http.post(this.apiUrl4, placa)
+    .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
+  }
 }

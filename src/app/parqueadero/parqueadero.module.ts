@@ -6,6 +6,7 @@ import { VehiculoListComponent } from './vehiculo-list/vehiculo-list.component';
 import { VehiculoCreateComponent } from './vehiculo-create/vehiculo-create.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { VehiculoCreateMotoComponent } from './vehiculo-create-moto/vehiculo-create-moto.component';
+import { VehiculoRemoveComponent } from './vehiculo-remove/vehiculo-remove.component';
 
 @NgModule({
   imports: [
@@ -14,6 +15,6 @@ import { VehiculoCreateMotoComponent } from './vehiculo-create-moto/vehiculo-cre
     FormsModule,
     ReactiveFormsModule
   ],
-  declarations: [VehiculoListComponent, VehiculoCreateComponent, VehiculoCreateMotoComponent]
+  declarations: [VehiculoListComponent, VehiculoCreateComponent, VehiculoCreateMotoComponent, VehiculoRemoveComponent]
 })
 export class ParqueaderoModule { }
