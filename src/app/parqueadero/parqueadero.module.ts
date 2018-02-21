@@ -3,12 +3,17 @@ import { CommonModule } from '@angular/common';
 
 import { ParqueaderoRoutingModule } from './parqueadero-routing.module';
 import { VehiculoListComponent } from './vehiculo-list/vehiculo-list.component';
+import { VehiculoCreateComponent } from './vehiculo-create/vehiculo-create.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { VehiculoCreateMotoComponent } from './vehiculo-create-moto/vehiculo-create-moto.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    ParqueaderoRoutingModule
+    ParqueaderoRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  declarations: [VehiculoListComponent]
+  declarations: [VehiculoListComponent, VehiculoCreateComponent, VehiculoCreateMotoComponent]
 })
 export class ParqueaderoModule { }
